@@ -1,0 +1,23 @@
+﻿@model Irina.Models.Home
+@{
+  var imagePath = "~/images/Portfolio/Makeup/2.jpg";
+
+  ViewData["Title"] = "Home Page";
+}
+<!DOCTYPE html>
+<html>
+<body>
+  <div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p> @ViewBag.Anna </p>
+    <h2>@ViewBag.Name</h2>
+    <img src="@imagePath" asp-append-version="true" />
+    @foreach (var item in Model.files)
+    {
+  
+      <img src="@item.Substring(7)" asp-append-version="true" />
+    }
+
+  </div>
+</body>
+</html>
